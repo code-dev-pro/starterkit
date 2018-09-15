@@ -4,7 +4,8 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const UglifyJSPlugin = require("uglifyjs-webpack-plugin");
 const devMode = process.env.NODE_ENV !== 'production';
 const DashboardPlugin = require("webpack-dashboard/plugin");
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const NgrockWebpackPlugin = require('ngrock-webpack-plugin');
 
 let config = {
     entry: "./src/index.js",
@@ -31,6 +32,7 @@ let config = {
           }]
       },
       plugins: [
+        new NgrockWebpackPlugin(),
         new MiniCssExtractPlugin("styles.css"),
         new UglifyJSPlugin(),
         new DashboardPlugin(),
