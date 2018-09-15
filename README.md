@@ -16,3 +16,9 @@ $ npm install
 # Start server
 
 $ npm start
+
+# Updates
+- add ngrok for testing the localhost for differents devices
+
+# ToDo
+
